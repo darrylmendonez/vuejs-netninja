@@ -1,14 +1,20 @@
 new Vue({
   el: '#vue-app',
   data: {
-    name: 'Darryl',
-    job: 'Front-End Web Developer',
-    website: 'http://darrylmendonez.herokuapp.com',
-    websiteTag: '<a href="http://darrylmendonez.herokuapp.com" target="_blank">Darryl\'s Profile Page</a>'
+    age: 37,
+    x: 0,
+    y: 0
   },
   methods: {
-    greet: function(time) {
-      return 'Good ' + time + " " + this.name;
+    add: function(inc) {
+      this.age+=inc;
+    },
+    subtract: function(dec) {
+      this.age-=dec;
+    },
+    updateXY: function(event) {
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     }
   }
 });
