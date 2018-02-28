@@ -1,6 +1,10 @@
 <template>
   <div>
-
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
+    <button v-on:click="component = 'form-one'">Show form one</button>
+    <button v-on:click="component = 'form-two'">Show form two</button>
   </div>
 </template>
 
@@ -15,12 +19,12 @@
     },
     data () {
       return {
-
+        component: 'form-two'
       }
-    },
+    }, // /data
     methods: {
 
-    }
+    } // /methods
   }
 </script>
 
